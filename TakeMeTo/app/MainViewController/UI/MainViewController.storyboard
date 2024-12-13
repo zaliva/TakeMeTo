@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="9OC-fQ-YMF">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="QQn-jQ-gl1" customClass="MainViewController" customModule="TakeMeTo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JFV-Ul-K6c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoApp" translatesAutoresizingMaskIntoConstraints="NO" id="0YX-8c-A0b">
+                                <rect key="frame" x="16" y="64" width="108" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DIZ-UI-Xgo"/>
+                                    <constraint firstAttribute="width" constant="108" id="q2k-fJ-YAd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3r-rP-Enk">
+                                <rect key="frame" x="16" y="766" width="382" height="56"/>
+                                <color key="backgroundColor" red="1" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="ogf-Ga-xE2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start Tour">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusWithMasks">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startTourAction:" destination="QQn-jQ-gl1" eventType="touchUpInside" id="6kf-hz-rnD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HX3-d9-AK9">
+                                <rect key="frame" x="354" y="64" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="dn0-Hh-HLw"/>
+                                    <constraint firstAttribute="height" constant="44" id="kBH-GG-BD3"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="profileDefaultIcon"/>
+                                <connections>
+                                    <action selector="showProfileAction:" destination="QQn-jQ-gl1" eventType="touchUpInside" id="gbe-Se-y2k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D5V-3d-hfz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="D5V-3d-hfz" firstAttribute="trailing" secondItem="HX3-d9-AK9" secondAttribute="trailing" constant="16" id="LGH-hM-cTP"/>
+                            <constraint firstItem="D5V-3d-hfz" firstAttribute="bottom" secondItem="D3r-rP-Enk" secondAttribute="bottom" constant="40" id="SoF-bP-CgQ"/>
+                            <constraint firstItem="D3r-rP-Enk" firstAttribute="centerX" secondItem="JFV-Ul-K6c" secondAttribute="centerX" id="Xa6-Ya-XDl"/>
+                            <constraint firstItem="0YX-8c-A0b" firstAttribute="top" secondItem="D5V-3d-hfz" secondAttribute="top" constant="16" id="drG-PZ-Zxp"/>
+                            <constraint firstItem="0YX-8c-A0b" firstAttribute="leading" secondItem="D5V-3d-hfz" secondAttribute="leading" constant="16" id="l8S-ZE-pag"/>
+                            <constraint firstItem="HX3-d9-AK9" firstAttribute="top" secondItem="D5V-3d-hfz" secondAttribute="top" constant="16" id="lfi-RV-J6i"/>
+                            <constraint firstItem="D5V-3d-hfz" firstAttribute="trailing" secondItem="D3r-rP-Enk" secondAttribute="trailing" constant="16" id="qDQ-Tc-U8n"/>
+                            <constraint firstItem="D3r-rP-Enk" firstAttribute="leading" secondItem="D5V-3d-hfz" secondAttribute="leading" constant="16" id="tVa-3d-X8P"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GvP-iB-i9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="81"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logoApp" width="217" height="88"/>
+        <image name="profileDefaultIcon" width="88" height="88"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
